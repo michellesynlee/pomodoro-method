@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    color: #062514; 
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    background-color: #e3f8e5;
+    text-align: center;
+}
+
+h1 {
+    color: #589c3b;
+    text-shadow:
+      -3px -3px 0 #000,
+       3px -3px 0 #000,
+      -3px  3px 0 #000,
+       3px  3px 0 #000;
+  }
+  
+.timer-selection {
+    margin-top: 5px;
+}
+  
+#custom-timer {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 2px solid #79c285;
+}
+
+#start-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    background-color: #398e36;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+  
+#start-btn:hover {
+    background-color: #256926;
+}
+
+#home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#home-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/*for timer pages*/
+.header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.description {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Indie Flower', cursive;
+}
