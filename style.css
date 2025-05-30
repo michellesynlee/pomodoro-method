@@ -1,7 +1,8 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Indie Flower', cursive;
+    font-size: large;
     display: flex;
     color: #062514; 
     flex-direction: column;
@@ -11,15 +12,6 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #589c3b;
-    text-shadow:
-      -3px -3px 0 #000,
-       3px -3px 0 #000,
-      -3px  3px 0 #000,
-       3px  3px 0 #000;
-  }
-  
 .timer-selection {
     margin-top: 5px;
 }
@@ -33,9 +25,9 @@ h1 {
 
 #start-btn {
     margin-top: 15px;
-    padding: 10px 20px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 14px;
+    padding: 6px 15px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 19px;
     background-color: #398e36;
     color: white;
     border: none;
@@ -76,4 +68,76 @@ h1 {
     margin: 0 auto;
     padding: 0 20px;
     font-family: 'Indie Flower', cursive;
+}
+
+/*basic timer styles*/
+
+.timer-container {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+.countdown-display {
+    font-size: 110px;
+    font-family: 'Baloo 2', sans-serif;
+    line-height: 0.9;
+    margin-top: 1px;
+}
+
+.basic-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Indie Flower', cursive;
+}
+.basic-input {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    font-family: 'Indie Flower', cursive;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.time-box label {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.time-box input {
+    font-size: 18px;
+    width: 70px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #29be65;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* buttons */
+.button-group img {
+    height: 50px;        
+    width: 50px;         
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    image-rendering: pixelated;
+}
+
+
+/* Hover effect - slightly bigger */
+.button-group img:hover {
+    transform: scale(1.5);
+}
+
+/* Click (active) effect - quickly shrinks down to simulate press */
+.button-group img:active {
+    transform: scale(0.95);
 }
