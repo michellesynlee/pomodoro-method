@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <audio id="timer-sound" src="alarmsound.mp3" preload="auto"></audio>
 </head>
 <body>
     <!--
@@ -25,6 +26,7 @@
             <img src="pause.png" alt="Pause Timer" class="pause-btn" onclick="pauseTimer()">
             <img src="reset.png" alt="Reset Timer" class="reset-btn" onclick="resetTimer()">
         </div>
+    
 
         <div class="basic-input">
             <div class="time-box">
@@ -40,6 +42,10 @@
               <input type="number" id="seconds" min="0" max="59" value="0" />
             </div>
         </div>
+
+        <button id="stop-sound-btn" style="display: none;" onclick="stopSound()">
+            Stop Alarm
+        </button>
 
     </div>
 

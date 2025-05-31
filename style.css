@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     justify-content: center; /* vertical center */
     align-items: center;     /* horizontal center */
-    background-color: #e3f8e5;
+    background-color: #bbe0b7;
     text-align: center;
 }
 
@@ -140,4 +140,21 @@ body {
 /* Click (active) effect - quickly shrinks down to simulate press */
 .button-group img:active {
     transform: scale(0.95);
+}
+
+#stop-sound-btn {
+    background-color: #e83431;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 17px;
+    font-size: 20px;
+    font-family: 'Baloo 2', sans-serif;
+    cursor: pointer;
+    margin-top: 0px;
+    display: none;
+}
+
+#stop-sound-btn:hover {
+    background-color: #ee8282;
 }

@@ -14,30 +14,40 @@ window.onload = function () {
     }
 
     window.startTimer = function () {
-        // Only grab input values if timer was fully stopped (not paused)
+        if (interval !== null) return; // Already running
+    
+        // Read input values only if not paused
         if (!isPaused) {
             let h = parseInt(document.getElementById("hours").value) || 0;
             let m = parseInt(document.getElementById("minutes").value) || 0;
             let s = parseInt(document.getElementById("seconds").value) || 0;
             totalSeconds = h * 3600 + m * 60 + s;
+    
+            // Prevent start if time is 0
+            if (totalSeconds === 0) {
+                alert("Please enter a time greater than 0!");
+                return;
+            }
+    
             updateDisplay();
         }
-
-        if (interval !== null) return; // prevent double intervals
-
+    
         isPaused = false;
-
+    
         interval = setInterval(() => {
             if (totalSeconds <= 0) {
                 clearInterval(interval);
                 interval = null;
-                document.getElementById("countdown-display").innerHTML = "<span style='font-size: 48px;'>Time's up!</span>";
+                document.getElementById("countdown-display").innerHTML = "<span style='font-size: 100px;'>BEEP! DONE!</span>";
+                document.getElementById("timer-sound").play();
+                document.getElementById("stop-sound-btn").style.display = "inline-block";
             } else {
                 totalSeconds--;
                 updateDisplay();
             }
         }, 1000);
     };
+    
 
     window.pauseTimer = function () {
         clearInterval(interval);
@@ -54,4 +64,12 @@ window.onload = function () {
         document.getElementById("seconds").value = 0;
         document.getElementById("countdown-display").textContent = "00:00:00";
     };
+
+    window.stopSound = function () {
+        const sound = document.getElementById("timer-sound");
+        sound.pause();
+        sound.currentTime = 0; // reset to beginning
+        document.getElementById("stop-sound-btn").style.display = "none";
+    };
+
 };

@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pomodoro</title>
+    <title>Pomodoro Timer</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pomodoro.css">
+    <audio id="alarm-sound" src="alarmsound.mp3" preload="auto"></audio>
 </head>
 <body>
+    <!--<img src="tomato.png" alt="Start" class="start-btn tilt" onclick="startPomodoro()"> -->
+
     <div class="header">
-        Pomodoro Method
+        Pomodoro Method : 25 minutes of work, then a 5 minute break. Repeat this four times, then take a longer break!
     </div>
+    <!--
     <div class="description">
         25 minutes of work, then a 5 minute break. Repeat this four times, then take a longer break!
-    </div>
+    </div> 
+    -->
     <a href="index.html">
         <img src="home.png" alt="Go Home" id="home-btn">
     </a>
+
+    <div class="timer-container">
+        <div class="countdown-row">
+            <img src="tomato.png" alt="Tomato Left" class="tomato-pic tilt">
+            <div id="pomodoro-display" class="countdown-display">25:00</div>
+            <img src="tomato.png" alt="Tomato Right" class="tomato-pic tilt">
+        </div>
+
+        <div id="round-display" class="round-display">Round 1 of 4</div>
+        <div class="button-group">
+            <img src="start.png" alt="Start" onclick="startPomodoro()">
+            <img src="pause.png" alt="Pause" onclick="pausePomodoro()">
+            <img src="reset.png" alt="Reset" onclick="resetPomodoro()">
+        </div>
+    </div>
+
+    <button id="stop-alarm-btn" onclick="stopAlarm()" style="display: none;">
+        Stop Alarm
+    </button>
+    
+    <script src="pomodoro.js"></script>
 </body>
 </html>
